@@ -10,3 +10,4 @@ tensorflow==2.9.1
 keras==2.9.0
 psutil==5.9.3
 pyyaml
+tqdm
