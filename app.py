@@ -80,7 +80,7 @@ predictor = initialization()
 predictor = predictor.cpu()
 
 # Setting the confidence threshold (higher the threshold lower the FPs) configure accordingly
-predictor.conf = 0.35 
+predictor.conf = 0.30
 
 # initializing vgg16 model for feature extraction
 model = load_similarity_model()
