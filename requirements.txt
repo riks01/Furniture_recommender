@@ -11,3 +11,6 @@ keras==2.9.0
 psutil==5.9.3
 pyyaml
 tqdm
+matplotlib
+seaborn
+requests
