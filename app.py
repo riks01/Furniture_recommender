@@ -23,7 +23,7 @@ save_img_dir = "./appdata/detected_images/detect/"
 dfpath = 'ikeadata/ikea_final_model0.csv'
 
 
-@st.cache_resource
+
 def load_ikeadf(path):
     df = pd.read_csv(path)
     vector = df['vector'].apply(lambda x: 
