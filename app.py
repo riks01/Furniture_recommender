@@ -139,7 +139,7 @@ if uploaded_file is not None:
     display = furniturelist
     options = list(range(len(furniturelist)))
     option = st.selectbox('Which furniture do you want to look for?', options, format_func=lambda x: display[x])
-
+    
     if len(detected_objs) == 0:
         st.warning('No objects detected, please re-upload the image and make sure your image contains any of the objects like "Bed", "Cabinetry", "Chair", "Couch", "Lamp", "Table".', icon="⚠️")
 
@@ -159,6 +159,7 @@ if uploaded_file is not None:
             columnli = [c1,c2,c3,c4,c5]
 
             for i,column in enumerate(columnli):
+                print('printing obj: ', obj_class)
                 coltitle = re.match(r"^([^,]*)",str(df[df['item_cat']==obj_class][i:i+1].item_name.values.astype(str)[0])).group()
                 colcat = str(df[df['item_cat']==obj_class][i:i+1].item_cat.values.astype(str)[0])
                 colpic = str(df[df['item_cat']==obj_class][i:i+1].index.values.astype(str)[0])
