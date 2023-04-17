@@ -159,7 +159,8 @@ if uploaded_file is not None:
             columnli = [c1,c2,c3,c4,c5]
 
             for i,column in enumerate(columnli):
-                print('printing obj: ', obj_class)
+                st.write('printing obj: ', obj_class)
+                st.dataframe(df[df['item_cat']==obj_class].head(10))
                 coltitle = re.match(r"^([^,]*)",str(df[df['item_cat']==obj_class][i:i+1].item_name.values.astype(str)[0])).group()
                 colcat = str(df[df['item_cat']==obj_class][i:i+1].item_cat.values.astype(str)[0])
                 colpic = str(df[df['item_cat']==obj_class][i:i+1].index.values.astype(str)[0])
