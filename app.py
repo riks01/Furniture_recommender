@@ -151,7 +151,7 @@ if uploaded_file is not None:
 
             pred_path = furniture_dict[furniture_type][image_index]
             image_array = preprocess_for_predict(pred_path)
-            df = compare_similarity(image_array,model)
+            df = compare_similarity(image_array, model)
             obj_class = furniture_type.lower() 
             st.write("Recommendation for: "+ obj_class)
 
@@ -160,7 +160,7 @@ if uploaded_file is not None:
 
             for i,column in enumerate(columnli):
                 st.write('printing obj: ', obj_class)
-                st.dataframe(df[df['item_cat']==obj_class].head(10))
+                st.dataframe(df.head(10)
                 coltitle = re.match(r"^([^,]*)",str(df[df['item_cat']==obj_class][i:i+1].item_name.values.astype(str)[0])).group()
                 colcat = str(df[df['item_cat']==obj_class][i:i+1].item_cat.values.astype(str)[0])
                 colpic = str(df[df['item_cat']==obj_class][i:i+1].index.values.astype(str)[0])
