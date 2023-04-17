@@ -141,7 +141,7 @@ if uploaded_file is not None:
     option = st.selectbox('Which furniture do you want to look for?', options, format_func=lambda x: display[x])
     
     if len(detected_objs) == 0:
-        st.warning('No objects detected, please re-upload the image and make sure your image contains any of the objects like "Bed", "Cabinetry", "Chair", "Couch", "Lamp", "Table".', icon="⚠️")
+        st.warning('No objects detected, please re-upload the image.', icon="⚠️")
 
     else:
         if st.button('Confirm to select '+furniturelist[option]):
