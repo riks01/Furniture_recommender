@@ -152,7 +152,7 @@ if uploaded_file is not None:
             pred_path = furniture_dict[furniture_type][image_index]
             image_array = preprocess_for_predict(pred_path)
             df = compare_similarity(image_array,model)
-            obj_class = furniture_type.lower() + 's'
+            obj_class = furniture_type.lower() 
             st.write("Recommendation for: "+ obj_class)
 
             c1, c2, c3, c4, c5 = st.columns((1, 1, 1, 1, 1))
